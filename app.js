@@ -2,9 +2,8 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function(request, response){
-  response.send('OK');
-});
+//app.use to mount middleware
+app.use(express.static('public'));
 
 app.get('/cities', function(request, response){
   //send when passed a string returns html by default
